@@ -23,8 +23,59 @@
             const context = canvas.getContext("2d");
 
             const frameCount = 36;
-            const currentFrame = (index) =>
+
+            /** const currentFrame = (index) =>
         `image-sequence/unt-dsktp_00000/unt-dsktp_${(index + 1).toString().padStart(5, "0")}.webp`;
+            */
+            let currentFrame = [];
+
+            currentFrame[0] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888545be24d8b37e6b5cad_unt-dsktp_00000.webp";
+            currentFrame[1] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888544f6215139a6c25fa3_unt-dsktp_00001.webp";
+            currentFrame[2] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885459c6ab83eafdb8343_unt-dsktp_00002.webp";
+            currentFrame[3] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885445c4f0ef369cfad19_unt-dsktp_00003.webp";
+            currentFrame[4] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888545f953e3c4f766c44c_unt-dsktp_00004.webp";
+            currentFrame[5] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885445c4f0ef369cfacd0_unt-dsktp_00005.webp";
+
+
+            currentFrame[6] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888545e1cd9d72915fe5f6_unt-dsktp_00006.webp";
+            currentFrame[7] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888545ec4bbea498e15a32_unt-dsktp_00007.webp";
+            currentFrame[8] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888545f6215139a6c2600e_unt-dsktp_00008.webp";
+            currentFrame[9] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885450a5d0637eb835ec0_unt-dsktp_00009.webp";
+            currentFrame[10] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/6488854590f8a48b18951e96_unt-dsktp_00010.webp";
+            currentFrame[11] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885459c6ab83eafdb8373_unt-dsktp_00011.webp";
+
+
+            currentFrame[12] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885455cf942a94a1220e8_unt-dsktp_00012.webp";
+            currentFrame[13] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885465cf942a94a122102_unt-dsktp_00013.webp";
+            currentFrame[14] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/6488854690f8a48b18951ebf_unt-dsktp_00014.webp";
+            currentFrame[15] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888546e64065dc221aa89c_unt-dsktp_00015.webp";
+            currentFrame[16] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885466d313f2e4079fe7c_unt-dsktp_00016.webp";
+            currentFrame[17] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888546e64065dc221aa954_unt-dsktp_00017.webp";
+
+
+            currentFrame[18] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885469441ee76176a3a47_unt-dsktp_00018.webp";
+            currentFrame[19] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/6488854626d7921913a41917_unt-dsktp_00019.webp";
+            currentFrame[20] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888546d5b3bf8acb3c606d_unt-dsktp_00020.webp";
+            currentFrame[21] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888546ee99490ab8b6004e_unt-dsktp_00021.webp";
+            currentFrame[22] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888546ec4bbea498e15d2a_unt-dsktp_00022.webp";
+            currentFrame[23] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885467e484493e2d26453_unt-dsktp_00023.webp";
+
+
+            currentFrame[24] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885460a5d0637eb836043_unt-dsktp_00024.webp";
+            currentFrame[25] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888547eb1c42246cbf5185_unt-dsktp_00025.webp";
+            currentFrame[26] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885462d7041894aefa920_unt-dsktp_00026.webp";
+            currentFrame[27] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888548d6b75626f3b76c57_unt-dsktp_00027.webp";
+            currentFrame[28] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888549f6215139a6c26310_unt-dsktp_00028.webp";
+            currentFrame[29] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888549bf3d4029e607aace_unt-dsktp_00029.webp";
+
+
+            currentFrame[30] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888549ab1082779c70697f_unt-dsktp_00030.webp";
+            currentFrame[31] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/648885499441ee76176a3cc3_unt-dsktp_00031.webp";
+            currentFrame[32] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888549f953e3c4f766cba7_unt-dsktp_00032.webp";
+            currentFrame[33] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/64888549a5a3d240d1575e27_unt-dsktp_00033.webp";
+            currentFrame[34] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/6488854b9c6ab83eafdb8989_unt-dsktp_00034.webp";
+            currentFrame[35] = "https://uploads-ssl.webflow.com/64776a1131688ea579106304/6488854bbe24d8b37e6b638a_unt-dsktp_00035.webp";
+
 
             const images = [];
             const sequence = {
@@ -33,7 +84,7 @@
 
             for (let i = 0; i < frameCount; i++) {
                 const img = new Image();
-                img.src = currentFrame(i);
+                img.src = currentFrame[i];
                 console.log(img);
                 images.push(img);
             }
@@ -48,13 +99,56 @@
                      * Your drawings need to be inside this function otherwise they will be reset when 
                      * you resize the browser window and the canvas goes will be cleared.
                      */
-                    drawStuff(); 
+                     drawStuff(); 
             }
             resizeCanvas();
             
+            
             function drawStuff() {
                 
+                gsap.to(sequence, {
+                frame: frameCount - 1,
+                snap: "frame",
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: "#canvas-container",
+                    start: "top top",
+                    end: "+=3500",
+                    markers: true,
+                    //pin: true,
+                    scrub: 0.1
+                },
+                onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
+                });
 
+                images[0].onload = render;
+
+                function render() {
+
+                    canvas.width = document.documentElement.clientWidth;
+                    canvas.height = document.documentElement.clientHeight; 
+
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+
+                    const iw     = images[sequence.frame].width;
+                    const ih     = images[sequence.frame].height;
+                    const cw     = canvas.width;
+                    const ch     = canvas.height;
+                    const f      = Math.max(cw/iw, ch/ih);
+
+                    context.setTransform(
+                        /*     scale x */ f,
+                        /*      skew x */ 0,
+                        /*      skew y */ 0,
+                        /*     scale y */ f,
+                        /* translate x */ (cw - f * iw) / 2,
+                        /* translate y */ (ch - f * ih) / 2,
+                    );
+                    
+                    
+                    
+                    context.drawImage(images[sequence.frame], 0, 0);
+                }
 
             }
 
